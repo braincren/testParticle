@@ -43,7 +43,7 @@ void MainScene::onButtonTest(cocos2d::CCObject *pSender, cocos2d::extension::CCC
    
     CCDirector* pDirector = CCDirector::sharedDirector();
     
-    CCScene *pScene = HelloWorld::scene();
+    CCScene *pScene = HelloWorld::scene(TYPE_FIRE);
     pDirector->pushScene(pScene);
 }
 

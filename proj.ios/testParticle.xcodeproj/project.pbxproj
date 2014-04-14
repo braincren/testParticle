@@ -14,7 +14,7 @@
 		1235267D18FBE29700B554D9 /* markerfelt24shadow.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 1235267B18FBE29700B554D9 /* markerfelt24shadow.fnt */; };
 		1235267E18FBE29700B554D9 /* markerfelt24shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1235267C18FBE29700B554D9 /* markerfelt24shadow.png */; };
 		124D9D6018FBE6C000ABB536 /* ccbParticleSnow.png in Resources */ = {isa = PBXBuildFile; fileRef = 124D9D5F18FBE6C000ABB536 /* ccbParticleSnow.png */; };
-		124D9D6218FBE9A600ABB536 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 124D9D6118FBE9A600ABB536 /* HelloWorld.png */; };
+		124D9D6618FC2F6900ABB536 /* fire.plist in Resources */ = {isa = PBXBuildFile; fileRef = 124D9D6518FC2F6900ABB536 /* fire.plist */; };
 		15A3D8FF1682F7D5002FB0C5 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A3D88B1682F7D5002FB0C5 /* b2BroadPhase.cpp */; };
 		15A3D9001682F7D5002FB0C5 /* b2CollideCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A3D88D1682F7D5002FB0C5 /* b2CollideCircle.cpp */; };
 		15A3D9011682F7D5002FB0C5 /* b2CollideEdge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A3D88E1682F7D5002FB0C5 /* b2CollideEdge.cpp */; };
@@ -273,7 +273,7 @@
 		1235267B18FBE29700B554D9 /* markerfelt24shadow.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = markerfelt24shadow.fnt; sourceTree = "<group>"; };
 		1235267C18FBE29700B554D9 /* markerfelt24shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = markerfelt24shadow.png; sourceTree = "<group>"; };
 		124D9D5F18FBE6C000ABB536 /* ccbParticleSnow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ccbParticleSnow.png; sourceTree = "<group>"; };
-		124D9D6118FBE9A600ABB536 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
+		124D9D6518FC2F6900ABB536 /* fire.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fire.plist; sourceTree = "<group>"; };
 		15A3D87E1682F7B3002FB0C5 /* cocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2dx.xcodeproj; path = ../../../cocos2dx/proj.ios/cocos2dx.xcodeproj; sourceTree = "<group>"; };
 		15A3D8891682F7D5002FB0C5 /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2D.h; sourceTree = "<group>"; };
 		15A3D88B1682F7D5002FB0C5 /* b2BroadPhase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2BroadPhase.cpp; sourceTree = "<group>"; };
@@ -1740,7 +1740,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				124D9D6118FBE9A600ABB536 /* HelloWorld.png */,
+				124D9D6518FC2F6900ABB536 /* fire.plist */,
 				1235266F18FBCF5500B554D9 /* ccb */,
 				D41A0AD0160F154A004552AE /* Default-568h@2x.png */,
 				7855E0DF153FEF240059DD9A /* Default.png */,
@@ -1823,7 +1823,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				124D9D6218FBE9A600ABB536 /* HelloWorld.png in Resources */,
 				7855E0E1153FEF240059DD9A /* Default.png in Resources */,
 				124D9D6018FBE6C000ABB536 /* ccbParticleSnow.png in Resources */,
 				1235267E18FBE29700B554D9 /* markerfelt24shadow.png in Resources */,
@@ -1836,6 +1835,7 @@
 				D41A0AD1160F154A004552AE /* Default-568h@2x.png in Resources */,
 				1235267718FBD3B400B554D9 /* btn-test-0.png in Resources */,
 				1235267D18FBE29700B554D9 /* markerfelt24shadow.fnt in Resources */,
+				124D9D6618FC2F6900ABB536 /* fire.plist in Resources */,
 				D446FD6E16102124000ADA7B /* Default@2x.png in Resources */,
 				15A3D9961682F7F9002FB0C5 /* CMakeLists.txt in Resources */,
 			);

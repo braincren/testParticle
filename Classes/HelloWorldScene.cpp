@@ -2,14 +2,14 @@
 
 USING_NS_CC;
 
-CCScene* HelloWorld::scene()
+CCScene* HelloWorld::scene(int type)
 {
     // 'scene' is an autorelease object
     CCScene *scene = CCScene::create();
     
     // 'layer' is an autorelease object
-    HelloWorld *layer = HelloWorld::create();
-
+    HelloWorld *layer = HelloWorld::create(type);
+   
     // add layer as a child to scene
     scene->addChild(layer);
 
@@ -18,7 +18,7 @@ CCScene* HelloWorld::scene()
 }
 
 // on "init" you need to initialize your instance
-bool HelloWorld::init()
+bool HelloWorld::init(int type)
 {
     //////////////////////////////
     // 1. super init first
@@ -26,6 +26,7 @@ bool HelloWorld::init()
     {
         return false;
     }
+    _nType = type;
     
     CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
     CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
@@ -60,22 +61,27 @@ bool HelloWorld::init()
     //menu->alignItemsHorizontally();//水平排列
     pMenu->setPosition(ccp(visibleSize.width-80,40));
     this->addChild(pMenu, 1);
-    
+
     /////////////////////////////
     // 3. add your codes below...
 
     // add a label shows "Hello World"
     // create and initialize a label
-    
-    CCLabelTTF* pLabel = CCLabelTTF::create("Hello World", "Arial", 24);
-    
+    CCLabelTTF* pLabel;
+    if(_nType==TYPE_FIRE)
+    {
+        pLabel = CCLabelTTF::create("Fire test", "Arial", 24);
+    }else
+    {
+        pLabel = CCLabelTTF::create("test", "Arial", 24);
+    }
     // position the label on the center of the screen
     pLabel->setPosition(ccp(origin.x + visibleSize.width/2,
                             origin.y + visibleSize.height - pLabel->getContentSize().height));
 
     // add the label as a child to this layer
     this->addChild(pLabel, 1);
-
+/*
     // add "HelloWorld" splash screen"
     CCSprite* pSprite = CCSprite::create("HelloWorld.png");
 
@@ -84,8 +90,26 @@ bool HelloWorld::init()
 
     // add the sprite as a child to this layer
     this->addChild(pSprite, 0);
-
+*/
+    runEffect(_nType);
+    
     return true;
+}
+
+void HelloWorld::runEffect(int type)
+{
+    CCLOG("type=%d",_nType);
+    
+    if(_nType==TYPE_FIRE)
+    {
+        this->removeChildByTag(10001 ,true);
+        CCParticleSystemQuad* system = CCParticleSystemQuad::create("fire.plist");
+    
+        CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
+
+        system->setPosition(ccp(visibleSize.width/2,10));
+        this->addChild(system ,1,10001);
+    }
 }
 
 void HelloWorld::OnBackMenu_Click(CCObject* pSender)
