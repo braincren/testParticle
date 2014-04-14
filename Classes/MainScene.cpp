@@ -1,4 +1,5 @@
 #include "MainScene.h"
+#include "HelloWorldScene.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -39,6 +40,11 @@ void MainScene::onButtonTest(cocos2d::CCObject *pSender, cocos2d::extension::CCC
    //this->mLabelText->setString("Hello CocosBuilder!!!");
     
     CCLOG("onButtonTest");
+   
+    CCDirector* pDirector = CCDirector::sharedDirector();
+    
+    CCScene *pScene = HelloWorld::scene();
+    pDirector->pushScene(pScene);
 }
 
 // init label text

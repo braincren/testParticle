@@ -29,7 +29,7 @@ bool HelloWorld::init()
     
     CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
     CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
-
+/*
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
@@ -48,7 +48,19 @@ bool HelloWorld::init()
     CCMenu* pMenu = CCMenu::create(pCloseItem, NULL);
     pMenu->setPosition(CCPointZero);
     this->addChild(pMenu, 1);
-
+*/
+    
+    //brainc add text button
+    CCMenuItemFont *itemBack = CCMenuItemFont::create("Back", this, menu_selector(HelloWorld::OnBackMenu_Click) );
+    itemBack->setFontSizeObj(40);
+    itemBack->setFontName("Arial");
+    //创建CCMenu菜单，其他可认为是菜单项
+    CCMenu* pMenu = CCMenu::create( itemBack, NULL);
+   // menu->alignItemsVertically();//可以理解为设置成垂直排列
+    //menu->alignItemsHorizontally();//水平排列
+    pMenu->setPosition(ccp(visibleSize.width-80,40));
+    this->addChild(pMenu, 1);
+    
     /////////////////////////////
     // 3. add your codes below...
 
@@ -72,10 +84,18 @@ bool HelloWorld::init()
 
     // add the sprite as a child to this layer
     this->addChild(pSprite, 0);
-    
+
     return true;
 }
 
+void HelloWorld::OnBackMenu_Click(CCObject* pSender)
+{
+    CCDirector* pDirector = CCDirector::sharedDirector();
+    
+   
+    pDirector->popScene();
+
+}
 
 void HelloWorld::menuCloseCallback(CCObject* pSender)
 {
