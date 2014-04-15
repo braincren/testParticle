@@ -68,12 +68,17 @@ bool HelloWorld::init(int type)
     // add a label shows "Hello World"
     // create and initialize a label
     CCLabelTTF* pLabel;
-    if(_nType==TYPE_FIRE)
+    switch (_nType)
     {
-        pLabel = CCLabelTTF::create("Fire test", "Arial", 24);
-    }else
-    {
-        pLabel = CCLabelTTF::create("test", "Arial", 24);
+        case TYPE_FIRE:
+            pLabel = CCLabelTTF::create("Fire test", "Arial", 24);
+            break;
+        case TYPE_DREAM:
+            pLabel = CCLabelTTF::create("Dream test", "Arial", 24);
+            break;
+        default:
+            pLabel = CCLabelTTF::create("test", "Arial", 24);
+            break;
     }
     // position the label on the center of the screen
     pLabel->setPosition(ccp(origin.x + visibleSize.width/2,

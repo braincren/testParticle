@@ -3,8 +3,12 @@
 
 #include "cocos2d.h"
 
-#define TYPE_FIRE   1
-#define TYPE_DREAM  2
+
+typedef enum {
+    TYPE_FIRE=1,
+    TYPE_DREAM,
+    TYPE_UNKNOW
+} POP_TYPE;
 
 class HelloWorld : public cocos2d::CCLayer
 {
