@@ -26,6 +26,7 @@ public:
     virtual cocos2d::extension::SEL_CCControlHandler onResolveCCBCCControlSelector(cocos2d::CCObject * pTarget, const char* pSelectorName);
     
     void onButtonTest(cocos2d::CCObject *pSender, cocos2d::extension::CCControlEvent pCCControlEvent);
+    void onButtonDream(cocos2d::CCObject *pSender, cocos2d::extension::CCControlEvent pCCControlEvent);
 
     // init label text
     virtual void onNodeLoaded(cocos2d::CCNode * pNode, cocos2d::extension::CCNodeLoader * pNodeLoader);

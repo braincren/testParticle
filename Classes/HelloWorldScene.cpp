@@ -109,6 +109,16 @@ void HelloWorld::runEffect(int type)
 
         system->setPosition(ccp(visibleSize.width/2,10));
         this->addChild(system ,1,10001);
+    }else if(_nType==TYPE_DREAM)
+    {
+        this->removeChildByTag(10001 ,true);
+        CCParticleSystemQuad* system = CCParticleSystemQuad::create("dream.plist");
+        
+        CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
+        
+        system->setPosition(ccp(visibleSize.width/2,visibleSize.height/2));
+        this->addChild(system ,1,10001);
+    
     }
 }
 

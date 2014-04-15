@@ -13,6 +13,7 @@
 		1235267818FBD3B400B554D9 /* btn-test-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1235267618FBD3B400B554D9 /* btn-test-1.png */; };
 		1235267D18FBE29700B554D9 /* markerfelt24shadow.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 1235267B18FBE29700B554D9 /* markerfelt24shadow.fnt */; };
 		1235267E18FBE29700B554D9 /* markerfelt24shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1235267C18FBE29700B554D9 /* markerfelt24shadow.png */; };
+		1241D69018FCD33300CF1655 /* dream.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1241D68F18FCD33300CF1655 /* dream.plist */; };
 		124D9D6018FBE6C000ABB536 /* ccbParticleSnow.png in Resources */ = {isa = PBXBuildFile; fileRef = 124D9D5F18FBE6C000ABB536 /* ccbParticleSnow.png */; };
 		124D9D6618FC2F6900ABB536 /* fire.plist in Resources */ = {isa = PBXBuildFile; fileRef = 124D9D6518FC2F6900ABB536 /* fire.plist */; };
 		15A3D8FF1682F7D5002FB0C5 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A3D88B1682F7D5002FB0C5 /* b2BroadPhase.cpp */; };
@@ -272,6 +273,7 @@
 		1235267618FBD3B400B554D9 /* btn-test-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-test-1.png"; sourceTree = "<group>"; };
 		1235267B18FBE29700B554D9 /* markerfelt24shadow.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = markerfelt24shadow.fnt; sourceTree = "<group>"; };
 		1235267C18FBE29700B554D9 /* markerfelt24shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = markerfelt24shadow.png; sourceTree = "<group>"; };
+		1241D68F18FCD33300CF1655 /* dream.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dream.plist; sourceTree = "<group>"; };
 		124D9D5F18FBE6C000ABB536 /* ccbParticleSnow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ccbParticleSnow.png; sourceTree = "<group>"; };
 		124D9D6518FC2F6900ABB536 /* fire.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fire.plist; sourceTree = "<group>"; };
 		15A3D87E1682F7B3002FB0C5 /* cocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2dx.xcodeproj; path = ../../../cocos2dx/proj.ios/cocos2dx.xcodeproj; sourceTree = "<group>"; };
@@ -1740,6 +1742,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1241D68F18FCD33300CF1655 /* dream.plist */,
 				124D9D6518FC2F6900ABB536 /* fire.plist */,
 				1235266F18FBCF5500B554D9 /* ccb */,
 				D41A0AD0160F154A004552AE /* Default-568h@2x.png */,
@@ -1837,6 +1840,7 @@
 				1235267D18FBE29700B554D9 /* markerfelt24shadow.fnt in Resources */,
 				124D9D6618FC2F6900ABB536 /* fire.plist in Resources */,
 				D446FD6E16102124000ADA7B /* Default@2x.png in Resources */,
+				1241D69018FCD33300CF1655 /* dream.plist in Resources */,
 				15A3D9961682F7F9002FB0C5 /* CMakeLists.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -4,6 +4,7 @@
 #include "cocos2d.h"
 
 #define TYPE_FIRE   1
+#define TYPE_DREAM  2
 
 class HelloWorld : public cocos2d::CCLayer
 {

@@ -30,7 +30,8 @@ SEL_MenuHandler MainScene::onResolveCCBCCMenuItemSelector(cocos2d::CCObject *pTa
 SEL_CCControlHandler MainScene::onResolveCCBCCControlSelector(cocos2d::CCObject *pTarget, const char *pSelectorName)
 {
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onButtonTest", MainScene::onButtonTest);
-  
+    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onButtonDream", MainScene::onButtonDream);
+    
     return NULL;
 }
 
@@ -44,6 +45,18 @@ void MainScene::onButtonTest(cocos2d::CCObject *pSender, cocos2d::extension::CCC
     CCDirector* pDirector = CCDirector::sharedDirector();
     
     CCScene *pScene = HelloWorld::scene(TYPE_FIRE);
+    pDirector->pushScene(pScene);
+}
+
+void MainScene::onButtonDream(cocos2d::CCObject *pSender, cocos2d::extension::CCControlEvent pCCControlEvent)
+{
+    //this->mLabelText->setString("Hello CocosBuilder!!!");
+    
+    CCLOG("onButtonDream");
+    
+    CCDirector* pDirector = CCDirector::sharedDirector();
+    
+    CCScene *pScene = HelloWorld::scene(TYPE_DREAM);
     pDirector->pushScene(pScene);
 }
 
